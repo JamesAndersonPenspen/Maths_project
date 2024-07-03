@@ -1,29 +1,21 @@
-keep_going = True
-count = 0
-full_number = 0
-while keep_going:
-    if_number = False
-    while if_number == False:
-        newnumber = input("Enter a number you would like to add: ")
-        if newnumber.isdigit():
-            newnumber = int(newnumber)
-            if_number = True
-        else:
-            print("This needs to be an integer! (E.g. 10)")
-    full_number += newnumber
-    if count == 0:
-        count += 1
-        pass
+
+final_number = 0
+if_number = False
+while if_number == False:
+    initial_number = input("Enter a number you would like to start with: ")
+    if initial_number.isdigit():
+        initial_number = int(initial_number)
+        if_number = True
     else:
-        while  True:
-            print("Your current total is: ",full_number,"\n Would you like to add another number? (Yes or no)")
-            confirm = input()
-            if confirm.lower() == "yes":
-                count += 1
-                break
-            elif confirm.lower() == "no":
-                keep_going = False
-                break
-            else: 
-                print("Incorrect input - the only accepted inputs are yes and no!")
-            count += 1
+        print("This needs to be an integer! (E.g. 10)")
+if_number2 = False
+while if_number2 == False:
+    subtracted_number = input("Enter a number you would like to subtract from the first number : ")
+    if subtracted_number.isdigit():
+        subtracted_number = int(subtracted_number)
+        if_number2 = True
+    else:
+        print("This needs to be an integer! (E.g. 10)")
+
+final_number = initial_number - subtracted_number
+print("Your final number is: ",final_number)
