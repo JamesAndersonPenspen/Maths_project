@@ -1,4 +1,3 @@
-
 final_number = 0
 if_number = False
 while if_number == False:
